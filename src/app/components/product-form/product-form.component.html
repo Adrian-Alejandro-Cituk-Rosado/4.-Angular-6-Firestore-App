@@ -1,0 +1,22 @@
+<div class="card card-body">
+  <form (ngSubmit)="saveProduct()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="product.name" placeholder="Name" required class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" [(ngModel)]="product.description" placeholder="Description" required class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" id="price" name="price" [(ngModel)]="product.price" step="0.01" placeholder="Price" required class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-dark w-100 mt-4">
+      {{ productToEdit ? 'Update Product' : 'Save Product' }}
+    </button>
+  </form>
+</div>
